@@ -1,0 +1,13 @@
+# robots.txt — Joy Logistics Exim India Pvt Ltd
+# https://www.joylogistics.in/
+
+User-agent: *
+Allow: /
+Disallow: /cgi-bin/
+Disallow: /tmp/
+
+# Crawl delay for courtesy
+Crawl-delay: 5
+
+# Sitemap location
+Sitemap: https://www.joylogistics.in/sitemap.xml

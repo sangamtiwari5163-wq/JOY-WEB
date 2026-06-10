@@ -1,0 +1,171 @@
+/* ═══════════════════════════════════════════════════════════════════
+   custom-style.css — Joy Logistics Exim India Pvt Ltd
+   Production v4 · 2026-06-10
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ── TRANSPARENT → SCROLLED NAVBAR ──────────────────────────────── */
+#main-header {
+    transition: background-color .35s cubic-bezier(.4,0,.2,1),
+                box-shadow       .35s cubic-bezier(.4,0,.2,1),
+                backdrop-filter  .35s ease;
+    will-change: background-color, box-shadow;
+}
+#main-header.scrolled {
+    background-color: rgba(10,25,47,.97);
+    box-shadow: 0 4px 30px rgba(0,0,0,.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* ── MOBILE NAVIGATION ────────────────────────────────────────────── */
+#mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .4s cubic-bezier(.4,0,.2,1);
+    visibility: hidden;
+}
+#mobile-menu.open {
+    max-height: 100vh;
+    visibility: visible;
+}
+
+/* ── DROPDOWN ─────────────────────────────────────────────────────── */
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+    display: block !important;
+    opacity: 1;
+    transform: translateY(0);
+}
+.dropdown-menu {
+    display: none;
+    will-change: transform, opacity;
+    transition: opacity .15s ease, transform .15s ease;
+}
+
+/* ── HERO VIDEO — mobile/desktop switching ──────────────────────── */
+/*
+   JS handles show/hide, but CSS ensures the hidden one is truly hidden
+   to avoid double video decode on older browsers.
+*/
+.hero-video-desktop,
+.hero-video-mobile {
+    will-change: transform; /* GPU compositing */
+    backface-visibility: hidden;
+}
+
+/* Solid poster color while video loads — no black flash */
+#home {
+    background-color: #0A192F;
+}
+
+/* ── SERVICES CARD SLIDER — seamless infinite marquee ──────────── */
+/*
+   7 cards × 2 sets = 14 cards.
+   Card: 300px + 6px gap (mx-[3px] each side) = 306px per slot.
+   Animate -50% = exactly 7 slots. Seamless reset.
+*/
+@keyframes servicesMarquee {
+    from { transform: translate3d(0,0,0); }
+    to   { transform: translate3d(-50%,0,0); }
+}
+.slider-track {
+    display: flex;
+    width: calc(306px * 14);
+    animation: servicesMarquee 35s linear infinite;
+    will-change: transform;
+}
+.slider-container:hover .slider-track,
+.slider-container:focus-within .slider-track {
+    animation-play-state: paused;
+}
+
+/* ── CLIENTS LOGO SLIDER — seamless infinite marquee ───────────── */
+@keyframes clientsMarquee {
+    from { transform: translate3d(0,0,0); }
+    to   { transform: translate3d(-50%,0,0); }
+}
+.animate-logo-slider {
+    animation: clientsMarquee 30s linear infinite;
+    will-change: transform;
+}
+.animate-logo-slider:hover,
+.animate-logo-slider:focus-within {
+    animation-play-state: paused;
+}
+
+/* ── FOCUS RING — keyboard accessibility ──────────────────────── */
+:focus-visible {
+    outline: 2px solid #FF6B00;
+    outline-offset: 2px;
+}
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* ── FORM SUCCESS STATE ────────────────────────────────────────── */
+.form-success-msg {
+    display: none;
+    padding: 1rem 1.25rem;
+    background: rgba(34,197,94,.1);
+    border: 1px solid rgba(34,197,94,.4);
+    border-radius: .75rem;
+    color: #86efac;
+    font-size: .875rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+.form-success-msg.show { display: block; }
+
+/* ── REDUCED MOTION ────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+    .slider-track,
+    .animate-logo-slider {
+        animation: none !important;
+    }
+    * {
+        transition-duration: .01ms !important;
+        animation-duration:  .01ms !important;
+    }
+    video {
+        display: none !important;
+    }
+}
+
+/* ── PRINT STYLES ──────────────────────────────────────────────── */
+@media print {
+    #main-header,
+    #mobile-menu,
+    .slider-container,
+    video,
+    .animate-logo-slider {
+        display: none !important;
+    }
+    body { font-size: 12pt; color: #000; }
+    a { color: #000; text-decoration: underline; }
+    a[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-size: .75em;
+        color: #555;
+    }
+}
+
+/* ── MOBILE HERO SPECIFIC ─────────────────────────────────────── */
+@media (max-width: 767px) {
+    /* Prevent layout shift on mobile when video loads */
+    #home video {
+        position: absolute;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    /* Slightly smaller CTA text on very small screens */
+    #home .text-3xl { font-size: 1.6rem; }
+}
+
+/* ── SAFE AREA (iPhone notch/home bar) ─────────────────────────── */
+@supports (padding: env(safe-area-inset-bottom)) {
+    footer {
+        padding-bottom: calc(2rem + env(safe-area-inset-bottom));
+    }
+}
