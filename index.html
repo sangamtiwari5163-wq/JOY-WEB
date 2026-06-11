@@ -24,7 +24,7 @@
     <meta property="og:url" content="https://www.joylogistics.in/">
     <meta property="og:title" content="Joy Logistics Exim India Pvt Ltd | International Freight Services">
     <meta property="og:description" content="Premium international logistics solutions engineered for efficiency, trust, and transparency. Air, Sea, Road Freight &amp; Project Cargo. Established since 2009.">
-    <meta property="og:image" content="https://www.joylogistics.in/assets/images/hero-poster.jpg">
+    <meta property="og:image" content="https://www.joylogistics.in/assets/images/hero-poster.webp">
     <meta property="og:image:width" content="1366">
     <meta property="og:image:height" content="768">
     <meta property="og:image:alt" content="Joy Logistics Exim India — International Freight &amp; Logistics">
@@ -33,7 +33,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Joy Logistics Exim India Pvt Ltd | International Freight Services">
     <meta name="twitter:description" content="Premium international logistics solutions — Air, Sea, Road Freight &amp; Project Cargo since 2009.">
-    <meta name="twitter:image" content="https://www.joylogistics.in/assets/images/hero-poster.jpg">
+    <meta name="twitter:image" content="https://www.joylogistics.in/assets/images/hero-poster.webp">
 
     <!-- ══ FONTS — non-blocking ══════════════════════════════════════ -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,8 +42,8 @@
     <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet"></noscript>
 
     <!-- ══ PRELOAD CRITICAL ASSETS ═══════════════════════════════════ -->
-    <link rel="preload" as="image" href="assets/images/hero-poster.jpg" media="(min-width:768px)">
-    <link rel="preload" as="image" href="assets/images/hero-poster-mobile.jpg" media="(max-width:767px)">
+    <link rel="preload" as="image" href="assets/images/hero-poster.webp" media="(min-width:1024px)">
+    <link rel="preload" as="image" href="assets/images/hero-poster-mobile.webp" media="(max-width:1023px)">
 
     <!-- ══ TAILWIND CDN ══════════════════════════════════════════════ -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -117,7 +117,7 @@
           "@type": "LocalBusiness",
           "@id": "https://www.joylogistics.in/#localbusiness",
           "name": "Joy Logistics Exim India Pvt Ltd",
-          "image": "https://www.joylogistics.in/assets/images/hero-poster.jpg",
+          "image": "https://www.joylogistics.in/assets/images/hero-poster.webp",
           "telephone": "+91-11-4052-4933",
           "email": "m2khw@joylogis.com",
           "address": {
@@ -234,18 +234,20 @@
         <!-- Background layer — pointer-events none so buttons are always clickable -->
         <div class="absolute inset-0 w-full h-full z-0 pointer-events-none" aria-hidden="true">
 
-            <!-- DESKTOP video: 768px and above -->
+            <!-- DESKTOP video: 1024px and above -->
             <video autoplay loop muted playsinline
-                   poster="assets/images/hero-poster.jpg"
+                   poster="assets/images/hero-poster.webp"
                    class="hero-video-desktop absolute inset-0 w-full h-full object-cover object-center"
+                   style="display:none;"
                    preload="none">
                 <source src="assets/videos/hero-bg.mp4" type="video/mp4">
             </video>
 
-            <!-- MOBILE video: below 768px — uses portrait crop + mobile poster -->
+            <!-- MOBILE/TABLET video: below 1024px — uses portrait crop + mobile poster -->
             <video autoplay loop muted playsinline
-                   poster="assets/images/hero-poster-mobile.jpg"
+                   poster="assets/images/hero-poster-mobile.webp"
                    class="hero-video-mobile absolute inset-0 w-full h-full object-cover object-center"
+                   style="display:block;"
                    preload="none">
                 <source src="assets/videos/hero-bg-mobile.mp4" type="video/mp4">
                 <!-- Fallback chain: if mobile video fails, browser loads nothing here and poster shows -->
@@ -285,7 +287,7 @@
     <section id="aboutus" class="py-24 bg-white relative z-20">
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
             <div class="relative group overflow-hidden rounded-2xl shadow-xl">
-                <img src="assets/images/welcome-banner.jpg"
+                <img src="assets/images/welcome-banner.webp"
                      alt="Joy Logistics warehouse and operations"
                      class="w-full h-full object-cover"
                      loading="lazy"
@@ -327,7 +329,7 @@
                     <!-- Original set -->
                     <div class="w-[300px] shrink-0 bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col justify-between group mx-[3px]" role="listitem">
                         <div>
-                            <div class="h-48 overflow-hidden relative"><img src="assets/images/project-cargo.jpg" alt="Project Cargo Logistics" loading="lazy" width="300" height="192" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+                            <div class="h-48 overflow-hidden relative"><img src="assets/images/project-cargo.webp" alt="Project Cargo Logistics" loading="lazy" width="300" height="192" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
                             <div class="p-6 space-y-3">
                                 <h3 class="text-xl font-bold text-logisticsBlue tracking-tight">PROJECT CARGO</h3>
                                 <p class="text-gray-500 text-sm font-light leading-relaxed">Cost-effective customized logistics solutions for transporting Bulk and Oversized Project Cargo.</p>
@@ -337,7 +339,7 @@
                     </div>
                     <div class="w-[300px] shrink-0 bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col justify-between group mx-[3px]" role="listitem">
                         <div>
-                            <div class="h-48 overflow-hidden relative"><img src="assets/images/sea-freight.jpg" alt="Sea Freight Shipping" loading="lazy" width="300" height="192" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+                            <div class="h-48 overflow-hidden relative"><img src="assets/images/sea-freight.webp" alt="Sea Freight Shipping" loading="lazy" width="300" height="192" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
                             <div class="p-6 space-y-3">
                                 <h3 class="text-xl font-bold text-logisticsBlue tracking-tight">SEA FREIGHT</h3>
                                 <p class="text-gray-500 text-sm font-light leading-relaxed">Best quality service from origin to destination via worldwide network of sea routes.</p>
@@ -347,7 +349,7 @@
                     </div>
                     <div class="w-[300px] shrink-0 bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col justify-between group mx-[3px]" role="listitem">
                         <div>
-                            <div class="h-48 overflow-hidden relative"><img src="assets/images/air-freight.jpg" alt="Air Freight Cargo" loading="lazy" width="300" height="192" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+                            <div class="h-48 overflow-hidden relative"><img src="assets/images/air-freight.webp" alt="Air Freight Cargo" loading="lazy" width="300" height="192" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
                             <div class="p-6 space-y-3">
                                 <h3 class="text-xl font-bold text-logisticsBlue tracking-tight">AIR FREIGHT</h3>
                                 <p class="text-gray-500 text-sm font-light leading-relaxed">Perfect logistics and transparent service through advanced information systems worldwide.</p>
@@ -357,7 +359,7 @@
                     </div>
                     <div class="w-[300px] shrink-0 bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col justify-between group mx-[3px]" role="listitem">
                         <div>
-                            <div class="h-48 overflow-hidden relative"><img src="assets/images/local-transport.jpg" alt="Local Road Transport" loading="lazy" width="300" height="192" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+                            <div class="h-48 overflow-hidden relative"><img src="assets/images/local-transport.webp" alt="Local Road Transport" loading="lazy" width="300" height="192" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
                             <div class="p-6 space-y-3">
                                 <h3 class="text-xl font-bold text-logisticsBlue tracking-tight">LOCAL TRANSPORT</h3>
                                 <p class="text-gray-500 text-sm font-light leading-relaxed">All kinds of in-land transportation, especially heavy cargo, with various fleet options.</p>
@@ -367,7 +369,7 @@
                     </div>
                     <div class="w-[300px] shrink-0 bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col justify-between group mx-[3px]" role="listitem">
                         <div>
-                            <div class="h-48 overflow-hidden relative"><img src="assets/images/custom-clearance.jpg" alt="Customs Clearance Services" loading="lazy" width="300" height="192" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+                            <div class="h-48 overflow-hidden relative"><img src="assets/images/custom-clearance.webp" alt="Customs Clearance Services" loading="lazy" width="300" height="192" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
                             <div class="p-6 space-y-3">
                                 <h3 class="text-xl font-bold text-logisticsBlue tracking-tight">CUSTOM CLEARANCE</h3>
                                 <p class="text-gray-500 text-sm font-light leading-relaxed">Expert customs clearance management — a prime element of the forwarding procedure.</p>
@@ -377,7 +379,7 @@
                     </div>
                     <div class="w-[300px] shrink-0 bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col justify-between group mx-[3px]" role="listitem">
                         <div>
-                            <div class="h-48 overflow-hidden relative"><img src="assets/images/household-goods.jpg" alt="Household Goods Relocation" loading="lazy" width="300" height="192" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+                            <div class="h-48 overflow-hidden relative"><img src="assets/images/household-goods.webp" alt="Household Goods Relocation" loading="lazy" width="300" height="192" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
                             <div class="p-6 space-y-3">
                                 <h3 class="text-xl font-bold text-logisticsBlue tracking-tight">HOUSEHOLD GOODS</h3>
                                 <p class="text-gray-500 text-sm font-light leading-relaxed">Safe and proper packaging of household goods — paramount importance globally.</p>
@@ -387,7 +389,7 @@
                     </div>
                     <div class="w-[300px] shrink-0 bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col justify-between group mx-[3px]" role="listitem">
                         <div>
-                            <div class="h-48 overflow-hidden relative"><img src="assets/images/delivery-services.jpg" alt="Last-Mile Delivery Services" loading="lazy" width="300" height="192" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
+                            <div class="h-48 overflow-hidden relative"><img src="assets/images/delivery-services.webp" alt="Last-Mile Delivery Services" loading="lazy" width="300" height="192" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div>
                             <div class="p-6 space-y-3">
                                 <h3 class="text-xl font-bold text-logisticsBlue tracking-tight">DELIVERY SERVICES</h3>
                                 <p class="text-gray-500 text-sm font-light leading-relaxed">Reliable express delivery designed to safely dispatch your goods door-to-door.</p>
@@ -396,13 +398,13 @@
                         <div class="p-6 pt-0"><a href="pages/delivery-services.html" class="text-sm font-semibold text-logisticsOrange hover:text-logisticsBlue transition">Read More →</a></div>
                     </div>
                     <!-- Duplicate set for seamless loop (aria-hidden) -->
-                    <div aria-hidden="true" class="w-[300px] shrink-0 bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col justify-between group mx-[3px]"><div><div class="h-48 overflow-hidden"><img src="assets/images/project-cargo.jpg" alt="" loading="lazy" width="300" height="192" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-6 space-y-3"><h3 class="text-xl font-bold text-logisticsBlue">PROJECT CARGO</h3><p class="text-gray-500 text-sm font-light">Cost-effective solutions for Bulk and Oversized Project Cargo.</p></div></div><div class="p-6 pt-0"><span class="text-sm font-semibold text-logisticsOrange">Read More →</span></div></div>
-                    <div aria-hidden="true" class="w-[300px] shrink-0 bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col justify-between group mx-[3px]"><div><div class="h-48 overflow-hidden"><img src="assets/images/sea-freight.jpg" alt="" loading="lazy" width="300" height="192" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-6 space-y-3"><h3 class="text-xl font-bold text-logisticsBlue">SEA FREIGHT</h3><p class="text-gray-500 text-sm font-light">Best quality service from origin to destination via worldwide network.</p></div></div><div class="p-6 pt-0"><span class="text-sm font-semibold text-logisticsOrange">Read More →</span></div></div>
-                    <div aria-hidden="true" class="w-[300px] shrink-0 bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col justify-between group mx-[3px]"><div><div class="h-48 overflow-hidden"><img src="assets/images/air-freight.jpg" alt="" loading="lazy" width="300" height="192" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-6 space-y-3"><h3 class="text-xl font-bold text-logisticsBlue">AIR FREIGHT</h3><p class="text-gray-500 text-sm font-light">Perfect logistics with advanced information systems worldwide.</p></div></div><div class="p-6 pt-0"><span class="text-sm font-semibold text-logisticsOrange">Read More →</span></div></div>
-                    <div aria-hidden="true" class="w-[300px] shrink-0 bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col justify-between group mx-[3px]"><div><div class="h-48 overflow-hidden"><img src="assets/images/local-transport.jpg" alt="" loading="lazy" width="300" height="192" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-6 space-y-3"><h3 class="text-xl font-bold text-logisticsBlue">LOCAL TRANSPORT</h3><p class="text-gray-500 text-sm font-light">In-land transportation for heavy cargo with various fleet options.</p></div></div><div class="p-6 pt-0"><span class="text-sm font-semibold text-logisticsOrange">Read More →</span></div></div>
-                    <div aria-hidden="true" class="w-[300px] shrink-0 bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col justify-between group mx-[3px]"><div><div class="h-48 overflow-hidden"><img src="assets/images/custom-clearance.jpg" alt="" loading="lazy" width="300" height="192" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-6 space-y-3"><h3 class="text-xl font-bold text-logisticsBlue">CUSTOM CLEARANCE</h3><p class="text-gray-500 text-sm font-light">Expert customs clearance management for all cargo types.</p></div></div><div class="p-6 pt-0"><span class="text-sm font-semibold text-logisticsOrange">Read More →</span></div></div>
-                    <div aria-hidden="true" class="w-[300px] shrink-0 bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col justify-between group mx-[3px]"><div><div class="h-48 overflow-hidden"><img src="assets/images/household-goods.jpg" alt="" loading="lazy" width="300" height="192" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-6 space-y-3"><h3 class="text-xl font-bold text-logisticsBlue">HOUSEHOLD GOODS</h3><p class="text-gray-500 text-sm font-light">Safe and proper packaging of household goods globally.</p></div></div><div class="p-6 pt-0"><span class="text-sm font-semibold text-logisticsOrange">Read More →</span></div></div>
-                    <div aria-hidden="true" class="w-[300px] shrink-0 bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col justify-between group mx-[3px]"><div><div class="h-48 overflow-hidden"><img src="assets/images/delivery-services.jpg" alt="" loading="lazy" width="300" height="192" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-6 space-y-3"><h3 class="text-xl font-bold text-logisticsBlue">DELIVERY SERVICES</h3><p class="text-gray-500 text-sm font-light">Reliable express delivery services door-to-door.</p></div></div><div class="p-6 pt-0"><span class="text-sm font-semibold text-logisticsOrange">Read More →</span></div></div>
+                    <div aria-hidden="true" class="w-[300px] shrink-0 bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col justify-between group mx-[3px]"><div><div class="h-48 overflow-hidden"><img src="assets/images/project-cargo.webp" alt="" loading="lazy" width="300" height="192" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-6 space-y-3"><h3 class="text-xl font-bold text-logisticsBlue">PROJECT CARGO</h3><p class="text-gray-500 text-sm font-light">Cost-effective solutions for Bulk and Oversized Project Cargo.</p></div></div><div class="p-6 pt-0"><span class="text-sm font-semibold text-logisticsOrange">Read More →</span></div></div>
+                    <div aria-hidden="true" class="w-[300px] shrink-0 bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col justify-between group mx-[3px]"><div><div class="h-48 overflow-hidden"><img src="assets/images/sea-freight.webp" alt="" loading="lazy" width="300" height="192" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-6 space-y-3"><h3 class="text-xl font-bold text-logisticsBlue">SEA FREIGHT</h3><p class="text-gray-500 text-sm font-light">Best quality service from origin to destination via worldwide network.</p></div></div><div class="p-6 pt-0"><span class="text-sm font-semibold text-logisticsOrange">Read More →</span></div></div>
+                    <div aria-hidden="true" class="w-[300px] shrink-0 bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col justify-between group mx-[3px]"><div><div class="h-48 overflow-hidden"><img src="assets/images/air-freight.webp" alt="" loading="lazy" width="300" height="192" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-6 space-y-3"><h3 class="text-xl font-bold text-logisticsBlue">AIR FREIGHT</h3><p class="text-gray-500 text-sm font-light">Perfect logistics with advanced information systems worldwide.</p></div></div><div class="p-6 pt-0"><span class="text-sm font-semibold text-logisticsOrange">Read More →</span></div></div>
+                    <div aria-hidden="true" class="w-[300px] shrink-0 bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col justify-between group mx-[3px]"><div><div class="h-48 overflow-hidden"><img src="assets/images/local-transport.webp" alt="" loading="lazy" width="300" height="192" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-6 space-y-3"><h3 class="text-xl font-bold text-logisticsBlue">LOCAL TRANSPORT</h3><p class="text-gray-500 text-sm font-light">In-land transportation for heavy cargo with various fleet options.</p></div></div><div class="p-6 pt-0"><span class="text-sm font-semibold text-logisticsOrange">Read More →</span></div></div>
+                    <div aria-hidden="true" class="w-[300px] shrink-0 bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col justify-between group mx-[3px]"><div><div class="h-48 overflow-hidden"><img src="assets/images/custom-clearance.webp" alt="" loading="lazy" width="300" height="192" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-6 space-y-3"><h3 class="text-xl font-bold text-logisticsBlue">CUSTOM CLEARANCE</h3><p class="text-gray-500 text-sm font-light">Expert customs clearance management for all cargo types.</p></div></div><div class="p-6 pt-0"><span class="text-sm font-semibold text-logisticsOrange">Read More →</span></div></div>
+                    <div aria-hidden="true" class="w-[300px] shrink-0 bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col justify-between group mx-[3px]"><div><div class="h-48 overflow-hidden"><img src="assets/images/household-goods.webp" alt="" loading="lazy" width="300" height="192" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-6 space-y-3"><h3 class="text-xl font-bold text-logisticsBlue">HOUSEHOLD GOODS</h3><p class="text-gray-500 text-sm font-light">Safe and proper packaging of household goods globally.</p></div></div><div class="p-6 pt-0"><span class="text-sm font-semibold text-logisticsOrange">Read More →</span></div></div>
+                    <div aria-hidden="true" class="w-[300px] shrink-0 bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 flex flex-col justify-between group mx-[3px]"><div><div class="h-48 overflow-hidden"><img src="assets/images/delivery-services.webp" alt="" loading="lazy" width="300" height="192" class="w-full h-full object-cover group-hover:scale-105 transition duration-500"></div><div class="p-6 space-y-3"><h3 class="text-xl font-bold text-logisticsBlue">DELIVERY SERVICES</h3><p class="text-gray-500 text-sm font-light">Reliable express delivery services door-to-door.</p></div></div><div class="p-6 pt-0"><span class="text-sm font-semibold text-logisticsOrange">Read More →</span></div></div>
                 </div>
             </div>
         </div>
@@ -580,7 +582,7 @@
                     <ul class="space-y-4 text-sm">
                         <li class="flex items-start gap-3">
                             <i class="fa-solid fa-location-dot text-logisticsOrange mt-1 flex-shrink-0" aria-hidden="true"></i>
-                            <address class="text-gray-400 not-italic">E-2/B-1 Extn.,<br>Mohan Cooperative Industrial Estate,<br>New Delhi – 110044</address>
+                            <address class="text-gray-400 not-italic">Mohan Coop. Industrial Estate,<br>New Delhi – 110044</address>
                         </li>
                         <li class="flex items-center gap-3">
                             <i class="fa-solid fa-phone text-logisticsOrange flex-shrink-0" aria-hidden="true"></i>
@@ -595,7 +597,7 @@
             </div>
             <div class="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
                 <p>&copy; 2026 <strong class="text-gray-400 font-medium">Joy Logistics Exim (India) Pvt. Ltd.</strong> · All Rights Reserved</p>
-                <p class="text-gray-600">CIN: U63040DL2009PTC192024 
+                <p class="text-gray-600">CIN: U63090DL2009PTC000000 · GST: 07AAACD0000A1Z0</p>
             </div>
         </div>
     </footer>
@@ -673,28 +675,6 @@
             });
         }
 
-        /* ── Hero video: show correct video per breakpoint, play when ready ── */
-        var videoDesktop = document.querySelector('.hero-video-desktop');
-        var videoMobile  = document.querySelector('.hero-video-mobile');
-        function applyVideoVisibility() {
-            var isMobile = window.matchMedia('(max-width: 767px)').matches;
-            if (videoDesktop) {
-                videoDesktop.style.display = isMobile ? 'none' : 'block';
-                if (!isMobile && videoDesktop.paused) {
-                    videoDesktop.load();
-                    videoDesktop.play().catch(function(){});
-                }
-            }
-            if (videoMobile) {
-                videoMobile.style.display = isMobile ? 'block' : 'none';
-                if (isMobile && videoMobile.paused) {
-                    videoMobile.load();
-                    videoMobile.play().catch(function(){});
-                }
-            }
-        }
-        applyVideoVisibility();
-        window.matchMedia('(max-width: 767px)').addListener(applyVideoVisibility);
 
     }());
     </script>

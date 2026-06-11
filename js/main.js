@@ -138,4 +138,38 @@
         });
     }
 
+    /* ── HERO VIDEO: correct asset per breakpoint ───────────────── */
+    /* Mobile + Tablet (below 1024px) → mobile video              */
+    /* Desktop (1024px and above)     → desktop video             */
+    var videoDesktop = document.querySelector('.hero-video-desktop');
+    var videoMobile  = document.querySelector('.hero-video-mobile');
+    var mobileQuery  = window.matchMedia('(max-width: 1023px)');
+    function applyVideoVisibility() {
+        var useMobile = mobileQuery.matches;
+        if (videoDesktop) {
+            videoDesktop.style.display = useMobile ? 'none' : 'block';
+            if (!useMobile && videoDesktop.paused) {
+                videoDesktop.load();
+                videoDesktop.play().catch(function(){});
+            } else if (useMobile && !videoDesktop.paused) {
+                videoDesktop.pause();
+            }
+        }
+        if (videoMobile) {
+            videoMobile.style.display = useMobile ? 'block' : 'none';
+            if (useMobile && videoMobile.paused) {
+                videoMobile.load();
+                videoMobile.play().catch(function(){});
+            } else if (!useMobile && !videoMobile.paused) {
+                videoMobile.pause();
+            }
+        }
+    }
+    applyVideoVisibility();
+    if (mobileQuery.addEventListener) {
+        mobileQuery.addEventListener('change', applyVideoVisibility);
+    } else {
+        mobileQuery.addListener(applyVideoVisibility);
+    }
+
 }());

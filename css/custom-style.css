@@ -149,18 +149,16 @@
     }
 }
 
-/* ── MOBILE HERO SPECIFIC ─────────────────────────────────────── */
-@media (max-width: 767px) {
-    /* Prevent layout shift on mobile when video loads */
+/* ── MOBILE + TABLET HERO SPECIFIC ───────────────────────────────── */
+@media (max-width: 1023px) {
+    /* Prevent layout shift when video loads */
     #home video {
         position: absolute;
         top: 0; left: 0;
         width: 100%; height: 100%;
         object-fit: cover;
-        object-position: center;
+        object-position: left center;
     }
-    /* Slightly smaller CTA text on very small screens */
-    #home .text-3xl { font-size: 1.6rem; }
 }
 
 /* ── SAFE AREA (iPhone notch/home bar) ─────────────────────────── */
