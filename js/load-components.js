@@ -179,6 +179,8 @@
                         'local-transport','custom-clearance','household-goods','delivery-services'];
 
   document.querySelectorAll('.nav-link').forEach(link => {
+    // Never touch links inside the slider track
+    if (link.closest('.slider-track')) return;
     const pg = link.getAttribute('data-page');
     const isService = servicePages.includes(pageKey);
     if (pg === pageKey || (isService && pg === 'services')) {
@@ -189,6 +191,7 @@
 
   // Dropdown item highlight
   document.querySelectorAll('.dropdown-link').forEach(link => {
+    if (link.closest('.slider-track')) return;
     if (link.getAttribute('data-page') === pageKey) {
       link.classList.add('text-logisticsOrange', 'bg-gray-50');
     }
@@ -196,6 +199,7 @@
 
   // Mobile nav highlight
   document.querySelectorAll('.mobile-link, .mobile-sub').forEach(link => {
+    if (link.closest('.slider-track')) return;
     const pg = link.getAttribute('data-page');
     const isService = servicePages.includes(pageKey);
     if (pg === pageKey || (isService && pg === 'services')) {
@@ -266,8 +270,8 @@
         header.style.transition = "all 0.3s ease";
       } else {
         // At top — transparent background
-        header.style.backgroundColor = "transparent";
-        header.style.boxShadow = "none";
+        header.style.backgroundColor = "#0A192F";
+        header.style.boxShadow = "0 4px 30px rgba(0,0,0,0.4)";
       }
     }
     window.addEventListener('scroll', handleScroll, { passive: true });
