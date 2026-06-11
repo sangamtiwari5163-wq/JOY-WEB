@@ -146,6 +146,9 @@
     var mobileQuery  = window.matchMedia('(max-width: 1023px)');
     function applyVideoVisibility() {
         var useMobile = mobileQuery.matches;
+        /* ── Poster fix: show correct poster per breakpoint ── */
+        if (videoDesktop) videoDesktop.poster = useMobile ? '' : 'assets/images/hero-poster.webp';
+        if (videoMobile)  videoMobile.poster  = useMobile ? 'assets/images/hero-poster-mobile.webp' : '';
         if (videoDesktop) {
             videoDesktop.style.display = useMobile ? 'none' : 'block';
             if (!useMobile && videoDesktop.paused) {
